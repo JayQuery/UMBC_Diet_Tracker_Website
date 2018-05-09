@@ -6,8 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <title>UMBC Diet Tracker</title>
-    <script type = "text/javascript"  src = "food_asynch.js" ></script>
+    <title><?php echo $login_fname ?></title>
     <script src="/lib/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
     <script src="/lib/jquery.plugin.js"></script>
@@ -19,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="./css/DT_progress.css" />
     <link rel="stylesheet" type="text/css" href="./css/DT_style.css" />
     <script type="text/javascript" src="./js/DTmemberSearch.js"></script>
+    <script type = "text/javascript"  src = "food_asynch.js" ></script>
     <style >
         <style>
      #circ-cont {
@@ -100,7 +100,7 @@
             </ul>
         </div>
 
-    <form method ="post" action="">
+    <form method ="post" action="" >
         <div class="prof-container">
 
             <h2>Welcome <?php echo $login_session; ?> !</h2>
@@ -163,7 +163,8 @@
         </div>
     </div>
     <script>
-        var val = 70;
+
+        var val = Math.floor((Math.random() * 100) + 1);
         var weekly = val * 5/7;
         var overall = val * 2/3;
         var $circle = $('#svg #bar');
@@ -220,6 +221,9 @@
                 $circle2.css({ strokeDashoffset: obj2.pct2-circumference2});
             }
         });
+        
+        
+        
         
 
     </script>
